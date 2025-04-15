@@ -44,7 +44,7 @@ def getRemovableIndices(str1, str2):
 
     # Last character must be removed, but guaranteed success
     if mismatches_removed == 0:
-        removable_indices = getRemovableRange(str1, len(str1) - 1) 
+        removable_indices = getRemovableRange(str1, len(str1) - 1)
 
     return removable_indices
 
