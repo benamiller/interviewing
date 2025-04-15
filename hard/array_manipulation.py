@@ -14,6 +14,27 @@ def arrayManipulationSlow(n, queries):
     return max_resultant
 
 
+def arrayManipulation(n, queries):
+    resultants = [0 for i in range(n + 1)]
+
+    for query in queries:
+        a, b, k = query
+        resultants[a] += k
+
+        if b < len(resultants) - 1:
+            resultants[b + 1] -= k
+
+    running_prefix = 0
+    max_resultant = float('-inf')
+
+    for resultant in resultants:
+        running_prefix += resultant
+        if running_prefix > max_resultant:
+            max_resultant = running_prefix
+
+    return max_resultant
+        
+
 if __name__ == "__main__":
     n = 5
     queries = [[1, 2, 100],  [2, 5, 100],  [3, 4, 100]]
@@ -12241,4 +12262,4 @@ if __name__ == "__main__":
         [1306869, 7242675, 53663],
     ]
 
-    print(arrayManipulationSlow(n, queries))
+    print(arrayManipulation(n, queries))
