@@ -20,13 +20,13 @@ class BinarySearchTree:
             current = self.root
 
             while True:
-                if val < current.info:
+                if val < current.data:
                     if current.left:
                         current = current.left
                     else:
                         current.left = Node(val)
                         break
-                elif val > current.info:
+                elif val > current.data:
                     if current.right:
                         current = current.right
                     else:
