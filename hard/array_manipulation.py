@@ -33,7 +33,7 @@ def arrayManipulation(n, queries):
             max_resultant = running_prefix
 
     return max_resultant
-        
+
 
 if __name__ == "__main__":
     n = 5
