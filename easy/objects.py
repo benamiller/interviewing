@@ -63,3 +63,4 @@ def print_singly_linked_list(node, sep):
         print(str(node.data), end=sep)
 
         node = node.next
+    print()
