@@ -1,3 +1,5 @@
+def findPercentage(scores, query):
+    return sum(scores[query]) / len(scores[query])
 
 
 if __name__ == "__main__":
@@ -10,5 +12,5 @@ if __name__ == "__main__":
         people_scores[person] += scores_for_person
 
     query = input()
-    print(people_scores)
-    print(query)
+
+    print(findPercentage(people_scores, query))
