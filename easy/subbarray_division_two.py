@@ -15,3 +15,9 @@ def birthday(s, d, m):
 
 
 if __name__ == "__main__":
+    s = list(map(int, input().rstrip().split()))
+
+    d = int(input())
+    m = int(input())
+
+    print(birthday(s, d, m))
