@@ -47,4 +47,9 @@ def closestNumbersAlt(arr):
 if __name__ == "__main__":
     arr = list(map(int, input().rstrip().split()))
 
-    print(closestNumbers(arr))
+    double_loop_solution = closestNumbers(arr)
+    single_loop_solution = closestNumbersAlt(arr)
+
+    assert double_loop_solution == single_loop_solution
+
+    print(double_loop_solution)
