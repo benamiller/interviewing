@@ -9,7 +9,9 @@ def closestNumbers(arr):
         second = arr[i + 1]
         difference = abs(first - second)
 
-    print(min_difference)
+        if difference < min_difference:
+            min_difference = difference
+
     for i in range(0, len(arr) - 1):
         first = arr[i]
         second = arr[i + 1]
